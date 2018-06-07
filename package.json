@@ -1,8 +1,47 @@
 {
-  "name": "webpack4-setting",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/YouTaekJung/webpack4-react-sass-img.git",
-  "author": "youtaekjung <jyt9319@gmail.com>",
-  "license": "MIT"
+    "name": "webpack4-setting",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/YouTaekJung/webpack4-react-sass-img.git",
+    "author": "youtaekjung <jyt9319@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "start": "webpack-dev-server --mode development --open",
+        "build": "webpack --mode production",
+        "precommit": "lint-staged"
+    },
+    "lint-staged": {
+        "*.{js,json,css,md}": [
+            "prettier --tab-width 4 --trailing-comma es5 --single-quote --write",
+            "git add"
+        ]
+    },
+    "devDependencies": {
+        "autoprefixer": "^8.6.0",
+        "babel-core": "^6.26.3",
+        "babel-loader": "^7.1.4",
+        "babel-preset-react": "^6.24.1",
+        "babel-preset-stage-2": "^6.24.1",
+        "css-loader": "^0.28.11",
+        "extract-text-webpack-plugin": "v4.0.0-beta.0",
+        "file-loader": "^1.1.11",
+        "html-loader": "^0.5.5",
+        "html-webpack-plugin": "^3.2.0",
+        "img-loader": "^3.0.0",
+        "node-sass": "^4.9.0",
+        "postcss-loader": "^2.1.5",
+        "precss": "^3.1.2",
+        "sass-loader": "^7.0.2",
+        "style-loader": "^0.21.0",
+        "url-loader": "^1.0.1",
+        "webpack": "^4.10.2",
+        "webpack-cli": "^3.0.2",
+        "webpack-dev-server": "^3.1.4"
+    },
+    "dependencies": {
+        "babel-preset-env": "^1.7.0",
+        "react": "^16.4.0",
+        "react-dom": "^16.4.0",
+        "react-router": "^4.2.0"
+    }
 }
